@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 
 // --- Helper for API calls ---
-const PROD_API_URL = import.meta.VITE_API_BASE_URL; // <-- REPLACE THIS WITH YOUR RENDER URL
+const PROD_API_URL = "https://ai-music-recommender-backend.onrender.com" // <-- REPLACE THIS WITH YOUR RENDER URL
 const DEV_API_URL = 'http://localhost:5000';
 const isProduction = window.location.hostname !== 'localhost' && !window.location.hostname.startsWith('192');
 const api = axios.create({ baseURL: isProduction ? PROD_API_URL : DEV_API_URL });
